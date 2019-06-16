@@ -16,7 +16,10 @@ import ru.sosnov.projectmanagement.util.SecurityContextUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -47,7 +50,7 @@ public class ProjectController {
     public String addProject(Model model, ProjectDTO projectDTO, HttpServletRequest request) throws IOException {
         User current = SecurityContextUtil.getAuthUser();
         model.addAttribute("current", current);
-        Project project = projectService.save(projectDTO);
+        projectService.save(projectDTO);
         return "redirect:/project/manage";
     }
 
@@ -94,7 +97,7 @@ public class ProjectController {
         projectDTO.setId(id);
         User current = SecurityContextUtil.getAuthUser();
         model.addAttribute("current", current);
-        Project project = projectService.update(projectDTO);
+        projectService.update(projectDTO);
         return "redirect:/project/manage";
     }
     /*

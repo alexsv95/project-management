@@ -12,6 +12,7 @@ import ru.sosnov.projectmanagement.model.enums.RoleType;
 import ru.sosnov.projectmanagement.repository.UserRepository;
 import ru.sosnov.projectmanagement.util.SecurityContextUtil;
 
+import java.nio.charset.Charset;
 import java.util.Random;
 
 @Controller
@@ -61,13 +62,14 @@ public class LoginController {
         String password = mergePassSalt(line, salt);
         try {
             java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
-            byte[] array = md.digest(password.getBytes());
+            byte[] array = md.digest(password.getBytes(Charset.forName("UTF-8")));
             StringBuffer sb = new StringBuffer();
             for (int i = 0; i < array.length; ++i) {
                 sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100), 1, 3);
             }
             return sb.toString();
         } catch (java.security.NoSuchAlgorithmException e) {
+            e.printStackTrace();
         }
         return null;
     }
