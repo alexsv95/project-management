@@ -1,0 +1,17 @@
+language: java
+jdk: oraclejdk11
+
+script: ./mvnw -e verify
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+deploy:
+  provider: heroku
+  api_key: $HEROKU_KEY
+  app: project-management
+
+notifications:
+  email:
+    recipients:
+      - a.sosnov95@gmail.com
+    on_failure: always
+    on_success: change

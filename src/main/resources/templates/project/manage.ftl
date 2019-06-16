@@ -3,7 +3,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Проекты <small>текст какой-то сюда</small></h3>
+                <h3>Управление проектами<small></small></h3>
             </div>
         </div>
 
@@ -66,7 +66,7 @@
                                         <div class="progress progress_sm">
                                             <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="57"></div>
                                         </div>
-                                        <small>57% Complete</small>
+                                        <small>57%</small>
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-success btn-xs">${project.status}</button>
