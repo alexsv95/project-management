@@ -59,7 +59,16 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Project update(ProjectDTO projectDTO) {
-        return null;
+        Project project = projectRepository.getOne(projectDTO.getId());
+        project.setStatus(projectDTO.getStatus());
+        project.setStartDate(projectDTO.getStartDate());
+        project.setNote(projectDTO.getNote());
+        project.setDescription(projectDTO.getDescription());
+        project.setName(projectDTO.getName());
+        if (projectDTO.getFile() != null) {
+            project.setAttachmentPath(uploadFile(projectDTO.getFile()));
+        }
+        return projectRepository.save(project);
     }
 
     private String uploadFile(MultipartFile file) {
