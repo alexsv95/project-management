@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Войти! | </title>
+    <title>Авторизация</title>
 
     <!-- Bootstrap -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +32,7 @@
         <div class="animate form login_form">
             <section class="login_content">
                 <form role="form" action="/login" method="post">
-                    <h1>Login Form</h1>
+                    <h1>Авторизация</h1>
                     <div>
                         <input  class="form-control" placeholder="Username" type="email" name="username" id="username" required autofocus />
                     </div>
@@ -46,8 +46,8 @@
                     <div class="clearfix"></div>
 
                     <div class="separator">
-                        <p class="change_link">New to site?
-                            <a href="#signup" class="to_register"> Create Account </a>
+                        <p class="change_link">Не зарегестрированы?
+                            <a href="#signup" class="to_register"> Создать аккаунт </a>
                         </p>
 
                         <div class="clearfix"></div>
@@ -60,7 +60,7 @@
         <div id="register" class="animate form registration_form">
             <section class="login_content">
                 <form method="post" action="/register">
-                    <h1>Create Account</h1>
+                    <h1>Создание аккаунта</h1>
                     <div>
                         <input name="email" type="email" class="form-control" placeholder="Email" required="" />
                     </div>
@@ -68,14 +68,14 @@
                         <input name="password" type="password" class="form-control" placeholder="Password" required="" />
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-default submit" >Submit</button>
+                        <button type="submit" class="btn btn-default submit" >Отправить</button>
                     </div>
 
                     <div class="clearfix"></div>
 
                     <div class="separator">
-                        <p class="change_link">Already a member ?
-                            <a href="#signin" class="to_register"> Log in </a>
+                        <p class="change_link">Уже отправили?
+                            <a href="#signin" class="to_register"> Войти </a>
                         </p>
 
                         <div class="clearfix"></div>
