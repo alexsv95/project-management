@@ -10,6 +10,6 @@ public interface ProjectService {
     List<Project> getAll();
     Project findOne(Long id);
     Project save(ProjectDTO projectDTO);
-    boolean delete(Long id);
+    void delete(Long id);
     Project update(ProjectDTO projectDTO);
 }

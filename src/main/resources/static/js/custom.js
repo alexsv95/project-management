@@ -1746,7 +1746,7 @@ if (typeof NProgress != 'undefined') {
 			}, function(start, end, label) {
 			  console.log(start.toISOString(), end.toISOString(), label);
 			});
-			$('#single_cal4').daterangepicker({
+			$('#startdate').daterangepicker({
 			  singleDatePicker: true,
 			  singleClasses: "picker_4"
 			}, function(start, end, label) {

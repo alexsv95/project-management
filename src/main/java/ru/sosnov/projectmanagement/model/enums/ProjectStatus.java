@@ -3,7 +3,7 @@ package ru.sosnov.projectmanagement.model.enums;
 import com.fasterxml.jackson.annotation.JsonCreator;
 
 public enum ProjectStatus {
-    NEW("NEW"), ASSIGNED("ASSIGNED"), DONE("DONE");
+    REGISTERED("REGISTERED"), PROGRESS("PROGRESS"), DONE("DONE");
 
     private String value;
 

@@ -3,6 +3,7 @@ package ru.sosnov.projectmanagement.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 import ru.sosnov.projectmanagement.model.enums.ProjectStatus;
 
 import javax.persistence.*;
@@ -21,6 +22,7 @@ public class Project {
 
     private String name;
 
+    @Column(length = 5000)
     private String description;
 
     @Column(name = "start_date")
@@ -29,5 +31,10 @@ public class Project {
     @Enumerated(EnumType.STRING)
     private ProjectStatus status;
 
+    @Column(length = 5000)
     private String note;
+
+    private Date created;
+
+    private String attachmentPath;
 }

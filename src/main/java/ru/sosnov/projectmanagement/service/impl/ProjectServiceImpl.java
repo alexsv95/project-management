@@ -1,12 +1,20 @@
 package ru.sosnov.projectmanagement.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 import ru.sosnov.projectmanagement.dto.ProjectDTO;
 import ru.sosnov.projectmanagement.model.Project;
 import ru.sosnov.projectmanagement.repository.ProjectRepository;
 import ru.sosnov.projectmanagement.service.ProjectService;
 
+import javax.servlet.ServletContext;
+import java.io.File;
+import java.io.IOException;
 import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,6 +25,8 @@ import java.util.List;
 public class ProjectServiceImpl implements ProjectService {
 
     private final ProjectRepository projectRepository;
+    private final ServletContext servletContext;
+    private final Logger LOG = LoggerFactory.getLogger(ProjectServiceImpl.class);
 
     @Override
     public List<Project> getAll() {
@@ -25,7 +35,7 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Project findOne(Long id) {
-        return null;
+        return projectRepository.getOne(id);
     }
 
     @Override
@@ -34,18 +44,43 @@ public class ProjectServiceImpl implements ProjectService {
         project.setName(projectDTO.getName());
         project.setDescription(projectDTO.getDescription());
         project.setNote(projectDTO.getNote());
-        project.setStartDate(Date.from(projectDTO.getStartDate().atStartOfDay(ZoneId.systemDefault()).toInstant()));
+        project.setStartDate(projectDTO.getStartDate());
         project.setStatus(projectDTO.getStatus());
+        project.setCreated(new Date());
+        String uploadFile = uploadFile(projectDTO.getFile());
+        project.setAttachmentPath(uploadFile);
         return projectRepository.save(project);
     }
 
     @Override
-    public boolean delete(Long id) {
-        return false;
+    public void delete(Long id) {
+        projectRepository.delete(findOne(id));
     }
 
     @Override
     public Project update(ProjectDTO projectDTO) {
         return null;
+    }
+
+    private String uploadFile(MultipartFile file) {
+        String uploadsDir = "/uploads/";
+        String realPathtoUploads =  servletContext.getRealPath(uploadsDir);
+        if(! new File(realPathtoUploads).exists())
+        {
+            new File(realPathtoUploads).mkdir();
+        }
+
+        String orgName = file.getOriginalFilename();
+        String ext = FilenameUtils.getExtension(orgName);
+        String filename = String.format("%s.%s", RandomStringUtils.randomAlphanumeric(8), ext);
+        String filePath = realPathtoUploads + filename;
+        File dest = new File(filePath);
+        try {
+            file.transferTo(dest);
+        } catch (IOException e) {
+            e.printStackTrace(); //todo
+            LOG.error("Cannot upload file {}", e.getMessage());
+        }
+        return realPathtoUploads + filename;
     }
 }

@@ -42,9 +42,9 @@
                                 <tr>
                                     <td>#${project.id}</td>
                                     <td>
-                                        <a>${project.name}</a>
+                                        <a href="/project/${project.id}">${project.name}</a>
                                         <br />
-                                        <small>Created 01.01.2015</small>
+                                        <small>Создан ${project.created}</small>
                                     </td>
                                     <td>
                                         <ul class="list-inline">
@@ -69,12 +69,12 @@
                                         <small>57% Complete</small>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-success btn-xs">Success</button>
+                                        <button type="button" class="btn btn-success btn-xs">${project.status}</button>
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                                        <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                        <a href="/project/${project.id}" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Просмотр </a>
+                                        <a href="/project/${project.id}/update" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Редактировать </a>
+                                        <a href="#" data-id="${project.id}" class="btn btn-danger btn-xs deleteProject"><i class="fa fa-trash-o"></i> Удалить </a>
                                     </td>
                                 </tr>
                             </#list>
@@ -87,4 +87,5 @@
             </div>
         </div>
     </div>
+
 </@base.layout>

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
 import ru.sosnov.projectmanagement.model.enums.ProjectStatus;
 
 import java.time.LocalDate;
@@ -20,10 +21,12 @@ public class ProjectDTO {
 
     private String description;
 
-    @DateTimeFormat(pattern ="yyyy-MM-dd")
-    private LocalDate startDate;
+//    @DateTimeFormat(pattern ="yyyy-MM-dd")
+    private Date startDate;
 
     private String note;
 
     private ProjectStatus status;
+
+    private MultipartFile file;
 }

@@ -18,7 +18,8 @@
     <!-- bootstrap-progressbar -->
     <link href="/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
 
-
+    <!-- bootstrap-daterangepicker -->
+    <link href="/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="/css/custom.min.css" rel="stylesheet">
@@ -191,9 +192,13 @@
 
 <!-- iCheck -->
 <script src="/iCheck/icheck.min.js"></script>
-
+<!-- bootstrap-daterangepicker -->
+<script src="/moment.min.js"></script>
+<script src="/daterangepicker.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="/js/custom.min.js"></script>
+
+<script src="/js/main.js"></script>
 </body>
 </html>
 

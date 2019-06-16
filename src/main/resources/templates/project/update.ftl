@@ -28,14 +28,14 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Название проекта <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="name" id="name" required="required" class="form-control col-md-7 col-xs-12">
+                                    <input value="${project.name}" type="text" name="name" id="name" required="required" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description">Описание <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <textarea id="description" class="form-control" rows="5" name="description"  ></textarea>
+                                    <textarea id="description" class="form-control" rows="5" name="description"  >${project.description}</textarea>
                                     <#--<input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">-->
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                         <div class="control-group">
                                             <div class="controls">
                                                 <div class="col-md-5 xdisplay_inputx form-group has-feedback">
-                                                    <input type="text" required name="startDate" class="form-control has-feedback-left" id="startdate" placeholder="Выбери дату" aria-describedby="inputSuccess2Status4">
+                                                    <input value="${startDate}" type="text" required name="startDate" class="form-control has-feedback-left" id="startdate" placeholder="Выбери дату" aria-describedby="inputSuccess2Status4">
                                                     <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                                                     <span id="inputSuccess2Status4" class="sr-only">(success)</span>
                                                 </div>
@@ -60,7 +60,7 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Заметка
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <textarea id="note" class="form-control" rows="5" name="note"  ></textarea>
+                                    <textarea id="note" class="form-control" rows="5" name="note"  >${project.note}</textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -75,9 +75,9 @@
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div id="status" class="btn-group" data-toggle="buttons">
                                         <select class="select2_single form-control" id="status" name="status">
-                                            <option value="REGISTERED">Зарегистрирован</option>
-                                            <option value="PROGRESS">В Работе</option>
-                                            <option value="DONE">Завершен</option>
+                                            <option <#if project.status=='REGISTERED'>selected="selected"</#if> value="REGISTERED">Зарегистрирован</option>
+                                            <option <#if project.status=='PROGRESS'>selected="selected"</#if> value="PROGRESS">В Работе</option>
+                                            <option <#if project.status=='DONE'>selected="selected"</#if> value="DONE">Завершен</option>
                                         </select>
                                     </div>
                                 </div>
