@@ -88,6 +88,15 @@ public class ProjectController {
         model.addAttribute("startDate", new SimpleDateFormat("MM/dd/yyyy").format(project.getStartDate()));
         return "/project/update";
     }
+
+    @PostMapping("/project/{id}/update")
+    public String update(Model model, @PathVariable Long id, ProjectDTO projectDTO) {
+        projectDTO.setId(id);
+        User current = SecurityContextUtil.getAuthUser();
+        model.addAttribute("current", current);
+        Project project = projectService.update(projectDTO);
+        return "redirect:/project/manage";
+    }
     /*
      * Просмотр:
      * + Редактирование
