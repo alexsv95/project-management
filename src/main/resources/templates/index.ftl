@@ -44,6 +44,9 @@
                     <div class="menu_section">
                         <h3>Меню</h3>
                         <ul class="nav side-menu">
+                            <li>
+                                <a href="/dashboard"><i class="fa fa-dashboard"></i> Доска проектов</a>
+                            </li>
                             <li><a><i class="fa fa-users"></i> Пользователи <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="/users">Список пользователей</a></li>
@@ -61,7 +64,7 @@
                                     <li><a href="/task/new">Создать задачу</a></li>
                                 </ul>
                             </li>
-                            <li><a href=""><i class="fa fa-braille "></i> Доска проектов</a></li>
+
                         </ul>
                     </div>
 

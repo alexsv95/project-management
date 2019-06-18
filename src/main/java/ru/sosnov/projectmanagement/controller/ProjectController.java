@@ -29,6 +29,15 @@ public class ProjectController {
 
     private final ProjectService projectService;
 
+    @GetMapping("/dashboard")
+    public String boardOfProjects(Model model) {
+        User current = SecurityContextUtil.getAuthUser();
+        model.addAttribute("current", current);
+        List<Project> all = projectService.getAll();
+        model.addAttribute("projects", all);
+        return "project/dashboard";
+    }
+
     @GetMapping("/project/manage")
     public String allProjectsPage(Model model) {
         User current = SecurityContextUtil.getAuthUser();
