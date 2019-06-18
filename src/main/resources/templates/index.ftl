@@ -61,7 +61,7 @@
                                     <li><a href="/task/new">Создать задачу</a></li>
                                 </ul>
                             </li>
-                            <li><a href="" <i class="fa fa-braille "></i> Доска проектов</a></li>
+                            <li><a href=""><i class="fa fa-braille "></i> Доска проектов</a></li>
                         </ul>
                     </div>
 
