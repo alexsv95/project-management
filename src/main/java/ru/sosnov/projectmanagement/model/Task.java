@@ -1,27 +1,27 @@
 package ru.sosnov.projectmanagement.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 import ru.sosnov.projectmanagement.model.enums.ProjectStatus;
+import ru.sosnov.projectmanagement.model.enums.TaskStatus;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
-@Table(name = "projects")
+@Table(name = "tasks")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
-@ToString(exclude = {"owner", "tasks" })
-@EqualsAndHashCode(exclude = {"owner", "tasks"})
-public class Project {
+@ToString(exclude = {"project", "assignee" })
+@EqualsAndHashCode(exclude = {"project", "assignee"})
+public class Task {
+
 
     @Id
     @GeneratedValue
@@ -29,28 +29,23 @@ public class Project {
 
     private String name;
 
+
     @Column(length = 5000)
     private String description;
 
     @JsonManagedReference
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User owner;
+    @JoinColumn(name = "project_id", nullable = false)
+    private Project project;
 
-    @Column(name = "start_date")
-    private Date startDate;
+    @JsonManagedReference
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User assignee;
+
+    @Column(name = "end_date")
+    private Date endDate;
 
     @Enumerated(EnumType.STRING)
-    private ProjectStatus status;
-
-    @Column(length = 5000)
-    private String note;
-
-    private Date created;
-
-    private String attachmentPath;
-
-    @JsonBackReference
-    @OneToMany(mappedBy = "project", fetch = FetchType.EAGER)
-    private List<Task> tasks;
+    private TaskStatus status;
 }

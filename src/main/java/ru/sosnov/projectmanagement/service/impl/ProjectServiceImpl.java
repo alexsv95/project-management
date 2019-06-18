@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import ru.sosnov.projectmanagement.dto.ProjectDTO;
 import ru.sosnov.projectmanagement.model.Project;
+import ru.sosnov.projectmanagement.model.User;
 import ru.sosnov.projectmanagement.repository.ProjectRepository;
 import ru.sosnov.projectmanagement.service.ProjectService;
+import ru.sosnov.projectmanagement.util.SecurityContextUtil;
 
 import javax.servlet.ServletContext;
 import java.io.File;
@@ -38,6 +40,7 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Project save(ProjectDTO projectDTO) {
+        User current = SecurityContextUtil.getAuthUser();
         Project project = new Project();
         project.setName(projectDTO.getName());
         project.setDescription(projectDTO.getDescription());
@@ -45,6 +48,7 @@ public class ProjectServiceImpl implements ProjectService {
         project.setStartDate(projectDTO.getStartDate());
         project.setStatus(projectDTO.getStatus());
         project.setCreated(new Date());
+        project.setOwner(current);
         String uploadFile = uploadFile(projectDTO.getFile());
         project.setAttachmentPath(uploadFile);
         return projectRepository.save(project);
