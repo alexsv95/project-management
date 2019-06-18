@@ -32,7 +32,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="manage" class="site_title"><i class="fa fa-paw"></i> <span>Менеджер!</span></a>
+                    <a href="project" class="site_title"><i class="fa fa-gears"></i> <span> Менеджер</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -58,7 +58,7 @@
                                     <li><a href="/project/new">Создать проект</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-tasks"></i> Задачи <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-indent"></i> Задачи <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="/task/manage">Мои задачи</a></li>
                                     <li><a href="/task/new">Создать задачу</a></li>
