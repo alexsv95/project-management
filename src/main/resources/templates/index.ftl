@@ -45,7 +45,7 @@
                         <h3>Меню</h3>
                         <ul class="nav side-menu">
                             <li>
-                                <a href="/dashboard"><i class="fa fa-dashboard"></i> Доска проектов</a>
+                                <a href="/dashboard"><i class="fa fa-trello"></i> Доска проектов</a>
                             </li>
                             <li><a><i class="fa fa-users"></i> Пользователи <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">

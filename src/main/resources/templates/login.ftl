@@ -60,7 +60,7 @@
         <div id="register" class="animate form registration_form">
             <section class="login_content">
                 <form method="post" action="/register">
-                    <h1>Создание аккаунта</h1>
+                    <h1>Регистрация</h1>
                     <div>
                         <input name="email" type="email" class="form-control" placeholder="Email" required="" />
                     </div>
@@ -74,7 +74,7 @@
                     <div class="clearfix"></div>
 
                     <div class="separator">
-                        <p class="change_link">Уже отправили?
+                        <p class="change_link">Уже зарегистрированы?
                             <a href="#signin" class="to_register"> Войти </a>
                         </p>
 
