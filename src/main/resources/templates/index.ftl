@@ -55,6 +55,13 @@
                                     <li><a href="/project/new">Создать проект</a></li>
                                 </ul>
                             </li>
+                            <li><a><i class="fa fa-tasks"></i> Задачи <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="/task/manage">Мои задачи</a></li>
+                                    <li><a href="/task/new">Создать задачу</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" <i class="fa fa-braille "></i> Доска проектов</a></li>
                         </ul>
                     </div>
 
