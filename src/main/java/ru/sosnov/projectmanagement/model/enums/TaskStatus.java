@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 
 public enum TaskStatus {
 
-    PROGRESS("В работе"), DONE("Выполнен");
+    PROGRESS("В работе"), DONE("Выполнена");
 
     private String value;
 

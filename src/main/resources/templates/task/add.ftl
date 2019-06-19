@@ -86,7 +86,7 @@
                                     <div id="status" class="btn-group" data-toggle="buttons">
                                         <select class="select2_single form-control" id="status" name="status">
                                             <option value="PROGRESS">В Работе</option>
-                                            <option value="DONE">Завершен</option>
+                                            <option value="DONE">Выполнена</option>
                                         </select>
                                     </div>
                                 </div>
