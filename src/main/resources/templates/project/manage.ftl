@@ -72,7 +72,7 @@
                                         <button type="button" class="btn btn-success btn-xs">${project.status}</button>
                                     </td>
                                     <td>
-                                        <a href="/project/${project.id}" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Просмотр </a>
+                                        <#--<a href="/project/${project.id}" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Просмотр </a>-->
                                         <a href="/project/${project.id}/update" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Редактировать </a>
                                         <a href="#" data-id="${project.id}" class="btn btn-danger btn-xs deleteProject"><i class="fa fa-trash-o"></i> Удалить </a>
                                     </td>
