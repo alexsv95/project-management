@@ -3,7 +3,9 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Управление проектами<small></small></h3>
+                <h3>Управление проектами
+                    <small></small>
+                </h3>
             </div>
         </div>
 
@@ -31,9 +33,11 @@
 
                             <#list projects as project>
                                 <#if project.status == 'Зарегистрирован'>
-                                    <div class="alert alert-warning alert-dismissible fade in" role="alert">
-                                        <strong>${project.name}</strong> ${project.description}
-                                    </div>
+                                    <a href="/project/${project.id}">
+                                        <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                                            <strong>${project.name}</strong> ${project.description}
+                                        </div>
+                                    </a>
                                 </#if>
                             </#list>
                         </div>
@@ -45,9 +49,11 @@
 
                             <#list projects as project>
                                 <#if project.status == 'В работе'>
-                                    <div class="alert alert-success alert-dismissible fade in" role="alert">
-                                        <strong>${project.name}</strong> ${project.description}
-                                    </div>
+                                    <a href="/project/${project.id}">
+                                        <div class="alert alert-success alert-dismissible fade in" role="alert">
+                                            <strong>${project.name}</strong> ${project.description}
+                                        </div>
+                                    </a>
                                 </#if>
                             </#list>
                         </div>
@@ -59,9 +65,11 @@
 
                             <#list projects as project>
                                 <#if project.status == 'Завершен'>
-                                    <div class="alert alert-danger alert-dismissible fade in" role="alert">
-                                        <strong>${project.name}</strong> ${project.description}
-                                    </div>
+                                    <a href="/project/${project.id}">
+                                        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                                            <strong>${project.name}</strong> ${project.description}
+                                        </div>
+                                    </a>
                                 </#if>
                             </#list>
                         </div>
