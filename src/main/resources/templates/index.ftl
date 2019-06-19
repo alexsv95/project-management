@@ -61,7 +61,6 @@
                             <li><a><i class="fa fa-indent"></i> Задачи <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="/task/manage">Мои задачи</a></li>
-                                    <li><a href="/task/new">Создать задачу</a></li>
                                 </ul>
                             </li>
 
