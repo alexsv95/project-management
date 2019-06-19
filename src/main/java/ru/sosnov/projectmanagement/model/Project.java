@@ -50,6 +50,9 @@ public class Project {
 
     private String attachmentPath;
 
+    @Transient
+    private transient Integer progress;
+
     @JsonBackReference
     @OneToMany(mappedBy = "project", fetch = FetchType.EAGER)
     private List<Task> tasks;

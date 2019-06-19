@@ -54,7 +54,6 @@
                                     <td>
                                         <a href="/task/${task.id}" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Просмотр </a>
                                         <a href="/task/${task.id}/update" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Редактировать </a>
-                                        <a href="#" data-id="${task.id}" class="btn btn-danger btn-xs deleteTask"><i class="fa fa-trash-o"></i> Удалить </a>
                                     </td>
                                 </tr>
                             </#list>

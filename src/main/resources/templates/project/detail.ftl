@@ -73,7 +73,9 @@
                                                 <form action="/files/download" method="post">
                                                     <input type="hidden" name="filename"
                                                            value="${project.attachmentPath}">
-                                                    <button class="btn btn-default" type="submit"><i class="fa fa-file-o"></i> Скачать </button>
+                                                    <button class="btn btn-default" type="submit"><i
+                                                                class="fa fa-file-o"></i> Скачать
+                                                    </button>
                                                 </form>
                                             </li>
                                         </ul>
@@ -91,7 +93,8 @@
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="panel-body">
-                                            <a class="btn btn-primary" href="/task/new" role="button"><i class="fa fa-plus"></i> Добавить задачу</a>
+                                            <a class="btn btn-primary" href="/task/new" role="button"><i
+                                                        class="fa fa-plus"></i> Добавить задачу</a>
 
                                             <br/>
 
@@ -101,60 +104,25 @@
                                 </div>
 
 
-                                <#--<h4>Recent Activity</h4>-->
+                                <h4>Список задач</h4>
 
-                                <#--<!-- end of user messages &ndash;&gt;-->
-                                <#--<ul class="messages">-->
-                                <#--<li>-->
-                                <#--<img src="images/img.jpg" class="avatar" alt="Avatar">-->
-                                <#--<div class="message_date">-->
-                                <#--<h3 class="date text-info">24</h3>-->
-                                <#--<p class="month">May</p>-->
-                                <#--</div>-->
-                                <#--<div class="message_wrapper">-->
-                                <#--<h4 class="heading">Desmond Davison</h4>-->
-                                <#--<blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>-->
-                                <#--<br />-->
-                                <#--<p class="url">-->
-                                <#--<span class="fs1 text-info" aria-hidden="true" data-icon=""></span>-->
-                                <#--<a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc </a>-->
-                                <#--</p>-->
-                                <#--</div>-->
-                                <#--</li>-->
-                                <#--<li>-->
-                                <#--<img src="images/img.jpg" class="avatar" alt="Avatar">-->
-                                <#--<div class="message_date">-->
-                                <#--<h3 class="date text-error">21</h3>-->
-                                <#--<p class="month">May</p>-->
-                                <#--</div>-->
-                                <#--<div class="message_wrapper">-->
-                                <#--<h4 class="heading">Brian Michaels</h4>-->
-                                <#--<blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>-->
-                                <#--<br />-->
-                                <#--<p class="url">-->
-                                <#--<span class="fs1" aria-hidden="true" data-icon=""></span>-->
-                                <#--<a href="#" data-original-title="">Download</a>-->
-                                <#--</p>-->
-                                <#--</div>-->
-                                <#--</li>-->
-                                <#--<li>-->
-                                <#--<img src="images/img.jpg" class="avatar" alt="Avatar">-->
-                                <#--<div class="message_date">-->
-                                <#--<h3 class="date text-info">24</h3>-->
-                                <#--<p class="month">May</p>-->
-                                <#--</div>-->
-                                <#--<div class="message_wrapper">-->
-                                <#--<h4 class="heading">Desmond Davison</h4>-->
-                                <#--<blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>-->
-                                <#--<br />-->
-                                <#--<p class="url">-->
-                                <#--<span class="fs1 text-info" aria-hidden="true" data-icon=""></span>-->
-                                <#--<a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc </a>-->
-                                <#--</p>-->
-                                <#--</div>-->
-                                <#--</li>-->
-                                <#--</ul>-->
                                 <!-- end of user messages -->
+                                <ul class="messages">
+                                    <#list tasks as task>
+                                        <li>
+                                            <div class="message_date">
+                                                <h3 class="date text-info">${task.endDate?date}</h3>
+                                                <p class="month">${task.status}</p>
+                                            </div>
+                                            <div class="message_wrapper">
+                                                <a href="/task/${task.id}"><h4 class="heading">${task.name}</h4></a>
+                                                <blockquote class="message">${task.description}</blockquote>
+                                                <br/>
+                                            </div>
+                                        </li>
+                                    </#list>
+                                </ul>
+                                <#--<!-- end of user messages &ndash;&gt;-->
 
 
                             </div>
@@ -179,7 +147,16 @@
 
                             </section>
 
-                            <a href="/project/${project.id}/update" class="btn btn-info btn-default"><i class="fa fa-pencil"></i> Редактировать </a>
+                            <a href="/project/${project.id}/update" class="btn btn-info btn-default"><i
+                                        class="fa fa-pencil"></i> Редактировать </a>
+
+                            <div class="row">
+                                <li>
+                                    <span class="name"> Руководитель</span>
+                                    <span class="value text-success"> ${project.owner.email}</span>
+                                </li>
+                            </div>
+
 
                         </div>
                         <!-- end project-detail sidebar -->

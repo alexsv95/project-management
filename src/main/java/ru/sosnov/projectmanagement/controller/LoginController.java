@@ -47,6 +47,11 @@ public class LoginController {
         return "redirect:/login";
     }
 
+    @RequestMapping("/")
+    public String home() {
+        return "redirect:/login";
+    }
+
     private static String generateSalt(int lenght) {
         char[] chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".toCharArray();
         StringBuilder stringBuilder = new StringBuilder();
@@ -73,6 +78,7 @@ public class LoginController {
         }
         return null;
     }
+
 
     private static String mergePassSalt(String password, String salt) {
         return password + salt;

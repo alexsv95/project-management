@@ -36,6 +36,13 @@
                                     <a href="/project/${project.id}">
                                         <div class="alert alert-warning alert-dismissible fade in" role="alert">
                                             <strong>${project.name}</strong> ${project.description}
+                                            <hr>
+                                            <td class="project_progress">
+                                                <div class="progress progress_sm">
+                                                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="${project.progress}"></div>
+                                                </div>
+                                                <small>${project.progress}%</small>
+                                            </td>
                                         </div>
                                     </a>
                                 </#if>
@@ -52,6 +59,13 @@
                                     <a href="/project/${project.id}">
                                         <div class="alert alert-success alert-dismissible fade in" role="alert">
                                             <strong>${project.name}</strong> ${project.description}
+                                            <hr>
+                                            <td class="project_progress">
+                                                <div class="progress progress_sm">
+                                                    <div class="progress-bar bg-red" role="progressbar" data-transitiongoal="${project.progress}"></div>
+                                                </div>
+                                                <small>${project.progress}%</small>
+                                            </td>
                                         </div>
                                     </a>
                                 </#if>
@@ -68,6 +82,13 @@
                                     <a href="/project/${project.id}">
                                         <div class="alert alert-danger alert-dismissible fade in" role="alert">
                                             <strong>${project.name}</strong> ${project.description}
+                                            <hr>
+                                            <td class="project_progress">
+                                                <div class="progress progress_sm">
+                                                    <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="${project.progress}"></div>
+                                                </div>
+                                                <small>${project.progress}%</small>
+                                            </td>
                                         </div>
                                     </a>
                                 </#if>

@@ -16,4 +16,5 @@ public interface TaskService {
     Task update(TaskDTO taskDTO);
 
     List<Task> getMy(User current);
+    List<Task> getProjects(Project project);
 }

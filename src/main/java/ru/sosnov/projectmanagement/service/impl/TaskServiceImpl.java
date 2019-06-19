@@ -53,11 +53,22 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Task update(TaskDTO taskDTO) {
-        return null;
+        Task task = taskRepository.getOne(taskDTO.getId());
+        task.setStatus(taskDTO.getStatus());
+        task.setName(taskDTO.getName());
+        task.setEndDate(taskDTO.getEndDate());
+        task.setDescription(taskDTO.getDescription());
+        task.setAssignee(userRepository.getOne(taskDTO.getUserId()));
+        return taskRepository.save(task);
     }
 
     @Override
     public List<Task> getMy(User current) {
         return taskRepository.getAllByAssignee(current);
+    }
+
+    @Override
+    public List<Task> getProjects(Project project) {
+        return taskRepository.getAllByProject(project);
     }
 }
