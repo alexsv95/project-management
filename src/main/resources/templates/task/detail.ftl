@@ -4,7 +4,7 @@
         <div class="page-title">
             <div class="title_left">
                 <h3>Детали задачи
-                    <small> ${task.name}</small>
+                    <small></small>
                 </h3>
             </div>
 

@@ -4,7 +4,7 @@
         <div class="page-title">
             <div class="title_left">
                 <h3>Детали проекта
-                    <small> ${project.name}</small>
+                    <small></small>
                 </h3>
             </div>
 
@@ -111,7 +111,7 @@
                                     <#list tasks as task>
                                         <li>
                                             <div class="message_date">
-                                                <h3 class="date text-info">${task.endDate?date}</h3>
+                                                <h2 class="date text-info">${task.endDate?date}</h2>
                                                 <p class="month">${task.status}</p>
                                             </div>
                                             <div class="message_wrapper">
@@ -150,11 +150,15 @@
                             <a href="/project/${project.id}/update" class="btn btn-info btn-default"><i
                                         class="fa fa-pencil"></i> Редактировать </a>
 
+                            <br/>
+                            <hr/>
+
                             <div class="row">
-                                <li>
-                                    <span class="name"> Руководитель</span>
+
+                                    <p><img src="/images/user.png " class="avatar" alt="Avatar"></p>
+                                    <span class="name">Руководитель: </span>
                                     <span class="value text-success"> ${project.owner.email}</span>
-                                </li>
+
                             </div>
 
 

@@ -3,7 +3,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Управление проектами
+                <h3>Доска проектов
                     <small></small>
                 </h3>
             </div>

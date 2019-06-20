@@ -3,7 +3,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Обновите задачу</h3>
+                <h3>Редактирование задачи</h3>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -11,7 +11,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Форма редактирования<small>инфа тут</small></h2>
+                        <h2>${task.name}<small></small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
@@ -75,8 +75,8 @@
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div id="status" class="btn-group" data-toggle="buttons">
                                         <select class="select2_single form-control" id="status" name="status">
-                                            <option <#if task.status=='PROGRESS'>selected="selected"</#if> value="PROGRESS">Зарегистрирован</option>
-                                            <option <#if task.status=='DONE'>selected="selected"</#if> value="DONE">Завершен</option>
+                                            <option <#if task.status=='PROGRESS'>selected="selected"</#if> value="PROGRESS">В работе</option>
+                                            <option <#if task.status=='DONE'>selected="selected"</#if> value="DONE">Выполнена</option>
                                         </select>
                                     </div>
                                 </div>
