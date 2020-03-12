@@ -32,7 +32,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="project" class="site_title"><i class="fa fa-gears"></i> <span> Creators</span></a>
+                    <a href="project" class="site_title"><img src="/images/user.png " class="avatar" alt="Avatar"> <span> Creators</span></a>
                 </div>
 
                 <div class="clearfix"></div>
