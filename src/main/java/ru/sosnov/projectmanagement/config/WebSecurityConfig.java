@@ -16,6 +16,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final AuthProvider authProvider;
 
+    public WebSecurityConfig(AuthProvider authProvider) {
+        this.authProvider = authProvider;
+    }
+
     @Override
     public void configure(WebSecurity web) throws Exception {
         web
