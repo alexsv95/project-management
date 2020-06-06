@@ -52,13 +52,13 @@
                                     <li><a href="/users">Список пользователей</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-calendar"></i> Проекты <span class="fa fa-list-alt"></span></a>
+                            <li><a><i class="fa fa-list-alt"></i> Проекты <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="/project/manage">Список проектов</a></li>
                                     <li><a href="/project/new">Создать проект</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-indent"></i> Задачи <span class="fa fa-tasks"></span></a>
+                            <li><a><i class="fa fa-tasks"></i> Задачи <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="/task/manage">Мои задачи</a></li>
                                 </ul>
