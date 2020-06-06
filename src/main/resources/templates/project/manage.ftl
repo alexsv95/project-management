@@ -15,6 +15,8 @@
                     <div class="x_title">
                         <h2>Проекты</h2>
                         <ul class="nav navbar-right panel_toolbox">
+                            <li><a href="/project/new" class="btn btn-success btn-xs"><i class="fa fa-plus-square-o"></i> Создать проект </a>
+                            </li>
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
                             <li><a class="close-link"><i class="fa fa-close"></i></a>
