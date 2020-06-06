@@ -4,7 +4,6 @@
         <div class="page-title">
             <div class="title_left">
                 <h3>Управление проектами<small></small></h3>
-                <a align="right" href="/project/new" class="btn btn-success btn-xs"><i class="fa fa-plus-square-o"></i> Создать проект </a>
             </div>
         </div>
 
