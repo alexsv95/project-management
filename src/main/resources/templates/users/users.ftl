@@ -3,7 +3,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Пользователи <small></small></h3>
+                <h3>Список пользователей<small></small></h3>
             </div>
         </div>
 
@@ -13,7 +13,7 @@
             <div class="col-md-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Пользователи</h2>
+                        <#--<h2>Пользователи</h2>-->
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
@@ -30,7 +30,9 @@
                             <thead>
                             <tr>
                                 <th style="width: 1%">#</th>
-                                <th style="width: 20%">Email</th>
+                                <th style="width: 20%">Пользователь</th>
+                                <th>Должность</th>
+                                <th>Email</th>
                                 <th>Роль</th>
                             </tr>
                             </thead>
@@ -38,6 +40,12 @@
                             <#list users as user>
                                 <tr>
                                     <td>#${user.id}</td>
+                                    <td>
+                                        ${user.fio}
+                                    </td>
+                                    <td>
+                                        ${user.position}
+                                    </td>
                                     <td>
                                         ${user.email}
                                     </td>

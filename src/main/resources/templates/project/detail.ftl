@@ -16,13 +16,17 @@
             <div class="col-md-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>${project.name}</h2>
+                        <h2 class="blue"><i class="fa fa-list-alt"></i> ${project.name}</h2>
                         <ul class="nav navbar-right panel_toolbox">
-                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                            </li>
-                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                            </li>
+                            <a href="/project/${project.id}/update" class="btn btn-info btn-sm"><i
+                                        class="fa fa-pencil"></i> Редактировать </a>
                         </ul>
+<#--                        <ul class="nav navbar-right panel_toolbox">-->
+<#--                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>-->
+<#--                            </li>-->
+<#--                            <li><a class="close-link"><i class="fa fa-close"></i></a>-->
+<#--                            </li>-->
+<#--                        </ul>-->
                         <div class="clearfix"></div>
                     </div>
 
@@ -49,11 +53,10 @@
                             <div>
                                 <section class="panel">
                                     <div class="x_title">
-                                        <h2>Описание</h2>
+                                        <h2>Описание проекта</h2>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="panel-body">
-                                        <h3 class="green"><i class="fa fa-paint-brush"></i> ${project.name}</h3>
 
                                         <p>${project.description}</p>
                                         <br/>
@@ -111,12 +114,15 @@
                                     <#list tasks as task>
                                         <li>
                                             <div class="message_date">
-                                                <h2 class="date text-info">${task.endDate?date}</h2>
+                                                <h4 class="date text-info">${task.endDate?date}</h4>
+                                                <p class="message">${task.assignee.fio}</p>
                                                 <p class="month">${task.status}</p>
                                             </div>
                                             <div class="message_wrapper">
                                                 <a href="/task/${task.id}"><h4 class="heading">${task.name}</h4></a>
                                                 <blockquote class="message">${task.description}</blockquote>
+                                                <br/>
+<#--                                                <p class="message">${task.assignee.fio}</p>-->
                                                 <br/>
                                             </div>
                                         </li>
@@ -133,6 +139,20 @@
                         <!-- start project-detail sidebar -->
                         <div class="col-md-3 col-sm-3 col-xs-12">
 
+                            <div class="row">
+                                <img src="/images/user.png " class="avatar" alt="Avatar">
+                            </div>
+                            <div class="row">
+                                <p><span class="name">Руководитель: </span>
+                                    <span class="value text-success"> ${project.owner.fio}</span></p>
+                                <p><span class="name">Должность: </span>
+                                    <span class="value text-success"> ${project.owner.position}</span></p>
+                                <p><span class="name">Email: </span>
+                                    <span class="value text-success"> ${project.owner.email}</span></p>
+                                <br/>
+                                <hr/>
+                            </div>
+
                             <section class="panel">
                                 <div class="x_title">
                                     <h2>Заметка</h2>
@@ -140,26 +160,21 @@
                                 </div>
                                 <div class="panel-body">
 
-                                    <p>${project.note}</p>
+                                    <p class="word">${project.note}</p>
                                     <br/>
 
                                 </div>
 
                             </section>
 
-                            <a href="/project/${project.id}/update" class="btn btn-info btn-default"><i
-                                        class="fa fa-pencil"></i> Редактировать </a>
+<#--                            <a href="/project/${project.id}/update" class="btn btn-info btn-sm"><i-->
+<#--                                        class="fa fa-pencil"></i> Редактировать </a>-->
 
-                            <br/>
-                            <hr/>
+<#--                            <br/>-->
+<#--                            <hr/>-->
 
-                            <div class="row">
 
-                                    <p><img src="/images/user.png " class="avatar" alt="Avatar"></p>
-                                    <span class="name">Руководитель: </span>
-                                    <span class="value text-success"> ${project.owner.email}</span>
 
-                            </div>
 
 
                         </div>

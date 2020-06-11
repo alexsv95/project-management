@@ -30,8 +30,9 @@
                             <thead>
                             <tr>
                                 <th style="width: 1%">#</th>
-                                <th style="width: 20%">Имя таска</th>
-                                <th>Исполнитель</th>
+                                <th style="width: 20%">Задача</th>
+                                <th>Дата дедлайна</th>
+                                <th>Проект</th>
                                 <th>Статус</th>
                                 <th style="width: 20%">#Управление</th>
                             </tr>
@@ -45,11 +46,14 @@
                                         <br />
                                     </td>
                                     <td>
-                                        ${task.assignee.email}
+                                        ${task.endDate?date}
                                     </td>
-
                                     <td>
-                                        <button type="button" class="btn btn-success btn-xs">${task.status}</button>
+                                        ${task.project.name}
+                                    </td>
+                                    <td>
+                                        ${task.status}
+<#--                                        <button type="button" class="btn btn-success btn-xs">${task.status}</button>-->
                                     </td>
                                     <td>
                                         <a href="/task/${task.id}" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Просмотр </a>

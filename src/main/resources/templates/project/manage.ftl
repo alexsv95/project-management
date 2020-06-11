@@ -30,7 +30,7 @@
                             <thead>
                             <tr>
                                 <th style="width: 1%">#</th>
-                                <th style="width: 20%">Имя проекта</th>
+                                <th style="width: 20%">Проект</th>
                                 <th>Команда</th>
                                 <th>Прогресс проекта</th>
                                 <th>Статус</th>
@@ -69,7 +69,8 @@
                                         <small>${project.progress}%</small>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-success btn-xs">${project.status}</button>
+                                        ${project.status}
+<#--                                        <button type="button" class="btn btn-success btn-xs">${project.status}</button>-->
                                     </td>
                                     <td>
                                         <#--<a href="/project/${project.id}" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Просмотр </a>-->

@@ -32,7 +32,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="https://project-management-knitu.herokuapp.com/dashboard" class="site_title"><img src="/images/creators.png" width="80%" align="center" border="1"></a>
+                    <a href="https://project-management-creators.herokuapp.com/dashboard" class="site_title"><img src="/images/creators.png" width="80%" align="center" border="1"></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -61,6 +61,7 @@
                             <li><a><i class="fa fa-tasks"></i> Задачи <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="/task/manage">Мои задачи</a></li>
+                                    <li><a href="/task/new">Создать задачу</a></li>
                                 </ul>
                             </li>
 
@@ -85,10 +86,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="/images/img.jpg" alt="">${current.email}
+                                <img src="/images/img.jpg" alt="">${current.fio}
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li><a href="/task/manage"><i class="fa fa-tasks pull-right"></i> Мои задачи</a></li>
                                 <li><a href="/logout"><i class="fa fa-sign-out pull-right"></i> Выйти</a></li>
                             </ul>
                         </li>

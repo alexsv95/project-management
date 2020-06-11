@@ -7,7 +7,7 @@ script: ./mvnw -e verify
 deploy:
   provider: heroku
   api_key: $HEROKU_KEY
-  app: project-management-creators
+  app: creators-projects
 
 notifications:
   email:

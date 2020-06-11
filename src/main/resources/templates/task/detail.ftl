@@ -16,12 +16,14 @@
             <div class="col-md-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>${task.name}</h2>
+                        <h2 class="blue"><i class="fa fa-tasks"></i> ${task.name}</h2>
                         <ul class="nav navbar-right panel_toolbox">
-                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                            </li>
-                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                            </li>
+                            <a href="/task/${task.id}/update" class="btn btn-info btn-sm"><i
+                                        class="fa fa-pencil"></i> Редактировать </a>
+<#--                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>-->
+<#--                            </li>-->
+<#--                            <li><a class="close-link"><i class="fa fa-close"></i></a>-->
+<#--                            </li>-->
                         </ul>
                         <div class="clearfix"></div>
                     </div>
@@ -36,8 +38,8 @@
                                     <span class="value text-success"> ${task.endDate?date} </span>
                                 </li>
                                 <li>
-                                    <span class="name"> Исполнитель</span>
-                                    <span class="value text-success"> ${task.assignee.email}</span>
+                                    <span class="name"> Проект</span>
+                                    <span class="value text-success"> ${task.project.name}</span>
                                 </li>
                                 <li class="hidden-phone">
                                     <span class="name">Статус</span>
@@ -49,11 +51,10 @@
                             <div>
                                 <section class="panel">
                                     <div class="x_title">
-                                        <h2>Описание</h2>
+                                        <h2>Описание задачи</h2>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="panel-body">
-                                        <h3 class="green"><i class="fa fa-paint-brush"></i> ${task.name}</h3>
 
                                         <p>${task.description}</p>
                                         <br/>
@@ -83,8 +84,24 @@
                         <div class="col-md-3 col-sm-3 col-xs-12">
 
 
-                            <a href="/task/${task.id}/update" class="btn btn-info btn-default"><i
-                                        class="fa fa-pencil"></i> Редактировать </a>
+                            <#--                            <a href="/project/${project.id}/update" class="btn btn-info btn-sm"><i-->
+                            <#--                                        class="fa fa-pencil"></i> Редактировать </a>-->
+
+<#--                            <br/>-->
+<#--                            <hr/>-->
+                            <div class="row">
+                                <img src="/images/user.png " class="avatar" alt="Avatar">
+                            </div>
+                            <div class="row">
+                                <p><span class="name">Исполнитель: </span>
+                                    <span class="value text-success"> ${task.assignee.fio}</span></p>
+                                <p><span class="name">Должность: </span>
+                                    <span class="value text-success"> ${task.assignee.position}</span></p>
+                                <p><span class="name">Email: </span>
+                                    <span class="value text-success"> ${task.assignee.email}</span></p>
+                            </div>
+
+
 
 
                         </div>
