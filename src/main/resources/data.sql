@@ -4,10 +4,10 @@ values (1, 'ADMIN', 'admin@mail.ru', 'Администратор', 'Админи
         (3, 'ADMIN', 'gubskiy@mail.ru', 'Губский Яков', 'Менеджер проектов', '365605ca3fc2ae3de28564b3f38edb38', '6zR3m'),-- admin
 
         (4, 'USER', 'voditel@mail.ru', 'Камелевский Денис', 'Водитель', '365605ca3fc2ae3de28564b3f38edb38', '6zR3m'), -- admin
-        (5, 'USER', 'effects@mail.ru', 'Клыков Артем', 'Дизайнер',  '365605ca3fc2ae3de28564b3f38edb38', '6zR3m'), -- admin
+        (5, 'USER', 'effects@mail.ru', 'Клыков Артем', 'Специалист по эффектам',  '365605ca3fc2ae3de28564b3f38edb38', '6zR3m'), -- admin
         (6, 'USER', 'sound@mail.ru', 'Немцов Виктор', 'Звукооператор', '365605ca3fc2ae3de28564b3f38edb38', '6zR3m'), -- admin
-        (7, 'USER', 'stage@mail.ru', 'Бондарев Антон', 'ХЗ', '365605ca3fc2ae3de28564b3f38edb38', '6zR3m'), -- admin
-        (8, 'USER', 'light@maill.ru', 'Грибов Артур', 'ХЗ', '365605ca3fc2ae3de28564b3f38edb38', '6zR3m'); -- admin
+        (7, 'USER', 'stage@mail.ru', 'Бондарев Антон', 'Монтажник сцены', '365605ca3fc2ae3de28564b3f38edb38', '6zR3m'), -- admin
+        (8, 'USER', 'light@maill.ru', 'Грибов Артур', 'Художник по свету', '365605ca3fc2ae3de28564b3f38edb38', '6zR3m'); -- admin
 
 
 insert into projects (id, name, description, start_date, status, note, created, attachment_path, user_id)
