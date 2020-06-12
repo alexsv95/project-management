@@ -69,26 +69,24 @@
                                         <#--<p>Tony Chicken</p>-->
                                         <#--</div>-->
 
-                                        <br/>
-                                        <h5>Файлы проекта</h5>
-                                        <ul class="list-unstyled project_files">
-                                            <li>
-                                                <form action="/files/download" method="post">
-                                                    <input type="hidden" name="filename"
-                                                           value="${project.attachmentPath}">
-                                                    <button class="btn btn-default" type="submit"><i
-                                                                class="fa fa-file-o"></i> Скачать
-                                                    </button>
-                                                </form>
-                                            </li>
-                                        </ul>
-                                        <br/>
+<#--                                        <br/>-->
+<#--                                        <h5>Файлы проекта</h5>-->
+<#--                                        <ul class="list-unstyled project_files">-->
+<#--                                            <li>-->
+<#--                                                <form action="/files/download" method="post">-->
+<#--                                                    <input type="hidden" name="filename"-->
+<#--                                                           value="${project.attachmentPath}">-->
+<#--                                                    <button class="btn btn-default" type="submit"><i-->
+<#--                                                                class="fa fa-file-o"></i> Скачать-->
+<#--                                                    </button>-->
+<#--                                                </form>-->
+<#--                                            </li>-->
+<#--                                        </ul>-->
+<#--                                        <br/>-->
 
                                     </div>
 
                                 </section>
-
-
                                 <div>
                                     <section class="panel">
                                         <div class="x_title">
