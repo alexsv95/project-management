@@ -63,7 +63,7 @@
                                     <div id="user" class="btn-group" data-toggle="buttons">
                                         <select class="select2_single form-control" id="user" required name="userId">
                                             <#list users as user>
-                                                <option value="${user.id}">${user.email}</option>
+                                                <option value="${user.id}">${user.fio}</option>
                                             </#list>
                                         </select>
                                     </div>

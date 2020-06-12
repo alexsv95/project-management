@@ -63,13 +63,13 @@
                                     <textarea id="note" class="form-control" rows="5" name="note"  ></textarea>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <#--<div class="form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Файл
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input name="file" id="file" type="file">
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="form-group">
                                 <label for="status" class="control-label col-md-3 col-sm-3 col-xs-12">Статус</label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
