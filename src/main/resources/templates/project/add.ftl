@@ -35,7 +35,7 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description">Описание <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <textarea id="description" class="form-control" rows="5" name="description"  ></textarea>
+                                    <textarea id="description" class="form-control" rows="5" name="description"  ></textarea>
                                     <#--<input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">-->
                                 </div>
                             </div>
@@ -63,13 +63,13 @@
                                     <textarea id="note" class="form-control" rows="5" name="note"  ></textarea>
                                 </div>
                             </div>
-                            <#--<div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Файл
-                                </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input name="file" id="file" type="file">
-                                </div>
-                            </div>-->
+<#--                            <div class="form-group">-->
+<#--                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Файл-->
+<#--                                </label>-->
+<#--                                <div class="col-md-6 col-sm-6 col-xs-12">-->
+<#--                                    <input name="file" id="file" type="file">-->
+<#--                                </div>-->
+<#--                            </div>-->
                             <div class="form-group">
                                 <label for="status" class="control-label col-md-3 col-sm-3 col-xs-12">Статус</label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">

@@ -49,8 +49,8 @@ public class ProjectServiceImpl implements ProjectService {
         project.setStatus(projectDTO.getStatus());
         project.setCreated(new Date());
         project.setOwner(current);
-        String uploadFile = uploadFile(projectDTO.getFile());
-        project.setAttachmentPath(uploadFile);
+//        String uploadFile = uploadFile(projectDTO.getFile());
+//        project.setAttachmentPath(uploadFile);
         return projectRepository.save(project);
     }
 
