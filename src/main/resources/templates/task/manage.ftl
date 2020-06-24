@@ -29,7 +29,7 @@
                         <table class="table table-striped projects">
                             <thead>
                             <tr>
-                                <th style="width: 1%">#</th>
+<#--                                <th style="width: 1%">#</th>-->
                                 <th style="width: 20%">Задача</th>
                                 <th>Дата дедлайна</th>
                                 <th>Проект</th>
@@ -40,7 +40,7 @@
                             <tbody>
                             <#list tasks as task>
                                 <tr>
-                                    <td>#${task.id}</td>
+<#--                                    <td>#${task.id}</td>-->
                                     <td>
                                         <a href="/task/${task.id}">${task.name}</a>
                                         <br />
