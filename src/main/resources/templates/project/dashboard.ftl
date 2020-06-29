@@ -37,7 +37,9 @@
                                 <#if project.status == 'Зарегистрирован'>
                                     <a href="/project/${project.id}">
                                         <div class="alert alert-warning alert-dismissible fade in" role="alert">
-                                            <strong>${project.name}</strong> <p>${project.description}</p>
+                                            <strong>${project.name}</strong>
+                                            <hr>
+                                            <p>${project.description}</p>
                                             <hr>
                                             <td class="project_progress">
                                                 <div class="progress progress_sm">
@@ -60,7 +62,9 @@
                                 <#if project.status == 'В работе'>
                                     <a href="/project/${project.id}">
                                         <div class="alert alert-info alert-dismissible fade in" role="alert">
-                                            <strong>${project.name}</strong> <p>${project.description}</p>
+                                            <strong>${project.name}</strong>
+                                            <hr>
+                                            <p>${project.description}</p>
                                             <hr>
                                             <td class="project_progress">
                                                 <div class="progress progress_sm">
@@ -83,7 +87,9 @@
                                 <#if project.status == 'Завершен'>
                                     <a href="/project/${project.id}">
                                         <div class="alert alert-success alert-dismissible fade in" role="alert">
-                                            <strong>${project.name}</strong> <p>${project.description}</p>
+                                            <strong>${project.name}</strong>
+                                            <hr>
+                                            <p>${project.description}</p>
                                             <hr>
                                             <td class="project_progress">
                                                 <div class="progress progress_sm">
