@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="panel-body">
 
-                                        <p>${project.description}</p>
+                                        <h4>${project.description}</h4>
                                         <br/>
 
                                         <#--<div class="project_detail">-->
@@ -90,14 +90,13 @@
                                 <div>
                                     <section class="panel">
                                         <div class="x_title">
-                                            <h2>Задачи</h2>
+                                            <h2>Список задач</h2>
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="panel-body">
-                                            <a class="btn btn-primary" href="/task/new" role="button"><i
-                                                        class="fa fa-plus"></i> Добавить задачу</a>
 
-                                            <br/>
+
+
 
                                         </div>
 
@@ -105,7 +104,7 @@
                                 </div>
 
 
-                                <h4>Список задач</h4>
+                                <!--<h4>Список задач</h4>-->
 
                                 <!-- end of user messages -->
                                 <ul class="messages">
@@ -118,13 +117,15 @@
                                             </div>
                                             <div class="message_wrapper">
                                                 <a href="/task/${task.id}"><h4 class="heading">${task.name}</h4></a>
-                                                <blockquote class="message">${task.description}</blockquote>
+                                                <blockquote class="message"><h5>${task.description}</h5></blockquote>
                                                 <br/>
 <#--                                                <p class="message">${task.assignee.fio}</p>-->
                                                 <br/>
                                             </div>
                                         </li>
                                     </#list>
+                                    <a class="btn btn-primary" href="/task/new" role="button"><i
+                                                class="fa fa-plus"></i> Добавить задачу</a>
                                 </ul>
                                 <#--<!-- end of user messages &ndash;&gt;-->
 
