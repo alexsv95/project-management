@@ -1,5 +1,5 @@
 language: java
-jdk: oraclejdk12
+jdk: oraclejdk8
 
 script: ./mvnw -e verify
 #after_success:
