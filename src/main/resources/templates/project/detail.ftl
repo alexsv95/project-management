@@ -90,13 +90,14 @@
                                 <div>
                                     <section class="panel">
                                         <div class="x_title">
-                                            <h2>Список задач</h2>
+                                            <h2>Задачи</h2>
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="panel-body">
+                                            <a class="btn btn-primary" href="/task/new" role="button"><i
+                                                        class="fa fa-plus"></i> Добавить задачу</a>
 
-
-
+                                            <br/>
 
                                         </div>
 
@@ -104,7 +105,7 @@
                                 </div>
 
 
-                                <!--<h4>Список задач</h4>-->
+                                <h4>Список задач</h4>
 
                                 <!-- end of user messages -->
                                 <ul class="messages">
@@ -124,8 +125,6 @@
                                             </div>
                                         </li>
                                     </#list>
-                                    <a class="btn btn-primary" href="/task/new" role="button"><i
-                                                class="fa fa-plus"></i> Добавить задачу</a>
                                 </ul>
                                 <#--<!-- end of user messages &ndash;&gt;-->
 
