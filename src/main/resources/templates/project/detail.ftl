@@ -91,19 +91,17 @@
                                             <h2>Задачи</h2>
                                             <div class="clearfix"></div>
                                         </div>
-                                        <div class="panel-body">
-                                            <a class="btn btn-primary" href="/task/new" role="button"><i
-                                                        class="fa fa-plus"></i> Добавить задачу</a>
+                                        <a class="btn btn-primary btn-sm" href="/task/new" role="button"><i
+                                                    class="fa fa-plus"></i> Добавить задачу</a>
+<#--                                        <div class="panel-body">-->
 
-                                            <br/>
 
-                                        </div>
+<#--                                            -->
+
+<#--                                        </div>-->
 
                                     </section>
                                 </div>
-
-
-                                <h4>Список задач</h4>
 
                                 <!-- end of user messages -->
                                 <ul class="messages">
@@ -128,6 +126,7 @@
 
 
                             </div>
+
 
 
                         </div>

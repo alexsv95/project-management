@@ -46,7 +46,7 @@
                     <div class="clearfix"></div>
 
                     <div class="separator">
-                        <p class="change_link">Не зарегестрированы?
+                        <p class="change_link">Не зарегистрированы?
                             <a href="#signup" class="to_register"> Создать аккаунт </a>
                         </p>
 
